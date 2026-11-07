@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О себе</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        aside {
+            background: var(--black);
+            padding: 0 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            scroll-margin-top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#top_films">Топ фильмов</a></li>
+                <li><a href="#directors">Любимые режиссёры</a></li>
+                <li><a href="#genres">Любимые жанры</a></li>
+                <li><a href="#form">Форма обратной связи</a></li>
+                <li><a href="#watchlist">Список фильмов</a></li>
+            </ul>
+            <button id="toggle-theme" type="button">Светлая тема</button>
+        </div>
+    </nav>
+    <header>
+
+        <div class="header-content">
+            <img src="images/avatar.png" alt="Аватар" width="150" height="150">
+            <div>
+                <h1>Битюков Дмитрий</h1>
+                <p>Любитель кино и сериалов</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="skills">
+            <h2>Навыки:</h2>
+            <ul>
+                <li>Сценарный анализ</li>
+                <li>Понимание операторской работы</li>
+                <li>Монтаж</li>
+                <li>Знание истории кинематографа</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Проекты:</h2>
+            <div class="projects">
+                <article class="project-card">
+                    <h3>Бесславные ублюдки</h3>
+                    <p>Альтернативный сценарий</p>
+                </article>
+                <article class="project-card">
+                    <h3>Пацаны</h3>
+                    <p>Фанатский трейлер</p>
+                </article>
+                <article class="project-card">
+                    <h3>Лучше звоните Солу</h3>
+                    <p>Альтернативный сценарий</p>
+                </article>
+            </div>
+        </section>
+        <section id="top_films">
+            <h2>Топ фильмов для просмотра:</h2>
+            <div class="films">
+                <article class="films-card">
+                    <h3>Одиссея</h3>
+                    <p>Жанры: эпический, фэнтези, приключения</p>
+                    <p>Год: 2026</p>
+                    <img src="images/Odyssey.webp" alt="Постер фильма 'Одиссея'" width="250" height="400">
+                </article>
+                <article class="films-card">
+                    <h3>Матрица</h3>
+                    <p>Жанры: фантастика, боевик</p>
+                    <p>Год: 1999</p>
+                    <img src="images/Matrix.jpg" alt="Постер фильма 'Матрица'" width="250" height="400">
+                </article>
+                <article class="films-card">
+                    <h3>Интерстеллар</h3>
+                    <p>Жанры: фантастика, драма</p>
+                    <p>Год: 2014</p>
+                    <img src="images/Interstellar.jpg" alt="Постер фильма 'Интерстеллар'" width="250" height="400">
+                </article>
+            </div>
+        </section>
+        <section id="directors">
+            <h2>Любимые режиссёры:</h2>
+            <div class="directors-grid">
+                <figure>
+                    <img src="images/Nolan.jpg" alt="Портрет Кристофера Нолана" width="150" height="180">
+                    <figcaption>
+                        <strong>Кристофер Нолан</strong><br>
+                        <b>"Начало"</b>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Tarantino.webp" alt="Портрет Тарантино" width="150" height="180">
+                    <figcaption>
+                        <strong>Квентин Тарантино</strong><br>
+                        <b>"Криминальное чтиво"</b>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/GuyRitchie.webp" alt="Портрет Гая Ричи" width="150" height="180">
+                    <figcaption>
+                        <strong>Гай Ричи</strong><br>
+                        <b>"Большой куш"</b>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Fincher.webp" alt="Портрет Финчера" width="150" height="180">
+                    <figcaption>
+                        <strong>Дэвид Финчер</strong><br>
+                        <b>"Бойцовский клуб"</b>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <aside id="genres">
+        <h2>Любимые жанры:</h2>
+        <ul>
+            <li>Научная фантастика</li>
+            <li>Приключения</li>
+            <li>Триллер</li>
+        </ul>
+    </aside>
+    <section id="watchlist">
+        <h2>Список фильмов к просмотру</h2>
+        <table id="films-table">
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Год</th>
+                    <th>Статус</th>
+                    <th>Действие</th>
+                </tr>
+            </thead>
+            <tbody id="films-tbody"></tbody>
+        </table>
+        <div class="watchlist-controls">
+            <button id="add-film" type="button">Добавить фильм</button>
+            <button id="clear-list" type="button">Очистить список</button>
+            <button id="toggle-table" type="button">Скрыть таблицу</button>
+        </div>
+    </section>
+    <form id="form" action="" method="post">
+        <h2>Форма обратной связи:</h2>
+        <p>
+            <label for="username">Имя:</label><br>
+            <input type="text" id="username" name="username" placeholder="Введите ваше имя">
+        </p>
+        <p>
+            <label for="useremail">Email:</label><br>
+            <input type="email" id="useremail" name="useremail" placeholder="example@mail.ru">
+        </p>
+        <p>
+            <label for="message">Сообщение:</label><br>
+            <textarea id="message" name="message" placeholder="Напишите ваше сообщение..." rows="5"></textarea>
+        </p>
+        <p>
+            <button type="submit">Отправить</button>
+        </p>
+    </form>
+    <footer>
+        <p>© 2026 Битюков Дмитрий <a href="https://example.ru">Связаться</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

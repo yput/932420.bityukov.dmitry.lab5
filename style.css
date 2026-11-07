@@ -1,0 +1,326 @@
+﻿:root {
+    --black: #0a0a0a;
+    --gold: #d4af37;
+    --grey: #1c1c1c;
+    --light_gray: #d4d4d4;
+    --font: Garamond;
+    --field: #8B8682;
+    --red: #FF0000;
+    --green: #1B4332;
+    --orange: #E67E22;
+    --dark_gold: #b8962e;
+    --dark_blue: #0d1b2a;
+}
+body.light-theme {
+    --black: #faf8f3;
+    --grey: #ffffff;
+    --gold: #8b6f1f;
+    --light_gray: #2a2a2a;
+    --dark_blue: #e8e0d0;
+    --field: #f0ece0;
+    --green: #2d6a4f;
+    --orange: #cc6600;
+    --red: #cc0000;
+    --dark_gold: #6b5518;
+
+    background: var(--black);
+    color: var(--light_gray);
+}
+body.light-theme input, body.light-theme textarea, body.light-theme button {
+    color: #000000;
+}
+body.light-theme input::placeholder, body.light-theme textarea::placeholder {
+    color: #333333;
+}
+body.light-theme button:hover {
+    background-color: var(--dark_gold);
+    color: #000000;
+}
+body.light-theme #films-table tr:hover {
+    background: var(--field);
+}
+body {
+    margin: 0;
+    background: var(--black);
+    color: var(--gold);
+    font-family: var(--font);
+}
+h1 {
+    color: var(--gold);
+    font-weight: 700;
+}
+h2, h3 {
+    color: var(--gold);
+}
+header {
+    position: static;
+    max-width: 1200px;
+    background: var(--grey);
+    padding: 21px;
+    border: 3px solid var(--green);
+    margin: 0 auto;
+}
+section {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    scroll-margin-top: 70px;
+}
+footer{
+    text-align: right;
+    padding-right: 2px;
+}
+form {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    scroll-margin-top: 70px;
+}
+.header-content {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.project-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--grey);
+    padding-left: 15px;
+    border: 1px solid var(--green);
+}
+.project-card::before {
+    content: "";                          
+    position: absolute;                    
+    top: 0;                              
+    left: 0;                              
+    width: 100%;                           
+    height: 100%;                          
+    background: rgba(212, 175, 55, 0.25);  
+    opacity: 0;
+}
+.project-card:hover::before {
+    opacity: 1;
+}
+.project-card h3 {
+    position: relative;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.project-card:hover h3 {
+    font-size: 1.5em;
+}
+input, textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    background-color: var(--field);
+    color: var(--black);
+    border: 3px solid var(--green);
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.6);
+}
+button {
+    background-color: var(--field);
+    color: var(--black);
+    border: 3px solid var(--green);
+    cursor: pointer;
+    padding: 10px;
+}
+input::placeholder, textarea::placeholder {
+    color: var(--black);
+}
+button:hover{
+    background-color: var(--light_gray);
+}
+button:active {
+    background-color: var(--gold);
+    color: var(--black);
+    transform: scale(0.97);
+}
+button:focus{
+    border-color: var(--red);
+}
+img {
+    border: 2px solid var(--green);
+}
+a {
+    color: var(--gold);
+    text-decoration: none;
+}
+a:visited {
+    color: var(--orange);
+}
+a:hover{
+    color: var(--dark_gold);
+}
+a:active {
+    color: var(--red);
+}
+a:focus{
+    outline: 2px solid var(--gold);
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+    overflow-x: clip;
+    max-width: 100%;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--dark_blue);
+    margin-bottom: 35px;
+}
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+}
+.theme-btn {
+    background: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background 0.3s, color 0.3s;
+    flex-shrink: 0;
+}
+
+.theme-btn:hover {
+    background: var(--gold);
+    color: var(--dark_blue);
+}
+.films {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.films-card {
+    background: var(--grey);
+    border: 1px solid var(--green);
+    flex: 0 1 calc((100% - 40px) / 3);
+    padding-bottom: 20px;
+}
+.films-card h3, .films-card p {
+    padding-left: 30px;
+}
+.films-card img {
+    display: block;
+    margin: 0 auto;
+}
+.directors-grid {
+    display: grid;
+    margin: 0 auto;
+    gap: 20px;
+    max-width: 800px;
+    grid-template-columns: 1fr 1fr;
+}
+#watchlist {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#films-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--grey);
+    margin-top: 20px;
+}
+#films-table th, #films-table td {
+    border: 1px solid var(--green);
+    padding: 10px;
+    text-align: left;
+}
+
+#films-table th {
+    background: var(--grey);
+    color: var(--gold);
+}
+
+#films-table tr:hover {
+    background: #2a2a2a;
+}
+.hidden {
+    display: none;
+}
+@media (max-width: 770px){
+    .projects {
+        grid-template-columns: 1fr 1fr;
+    }
+    .films-card {
+        flex: 0 1 calc((100% - 20px) / 2);
+    }
+    .directors-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .project-card {
+        padding-left: 10px;
+    }
+    .films-card h3, .films-card p {
+        padding-left: 15px;
+    }
+}
+@media (max-width: 480px){
+    .projects {
+        grid-template-columns: 1fr;
+    }
+    .directors-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    nav ul {
+        gap: 10px;
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+    .films-card {
+        flex: 0 1 100%;
+    }
+    .project-card {
+        padding-left: 10px;
+    }
+    .films-card h3, .films-card p {
+        padding-left: 15px;
+    }
+    #films-table th, #films-table td {
+        padding: 5px;
+        font-size: 0.85em;
+    }
+    #films-table button {
+        padding: 5px 8px;
+        font-size: 0.8em;
+    }
+    .watchlist-controls {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .watchlist-controls button {
+        width: 100%;
+    }
+}
